@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-brand, .nav-link {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.hero-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, minmax(auto, 200px));
+  grid-template-rows: repeat(4, minmax(auto, 200px));
+  gap: 10px;
+}
+.hero-grid .item-text {
+  font-family: "Poppins", sans-serif;
+  grid-column: span 2;
+}
+.hero-grid .item-text h1 {
+  font-weight: 700;
+}
+.hero-grid .item-text p {
+  color: gray;
+}
+.hero-grid .item-1, .hero-grid .item-2 {
+  grid-column: 4;
+}
+.hero-grid .item-2 {
+  grid-row: 2;
+}
+.hero-grid .item-3 {
+  grid-column: 2;
+}
+.hero-grid .item-3, .hero-grid .item-5 {
+  grid-row: 3;
+}
+.hero-grid .item-4 {
+  grid-row: 2/4;
+  grid-column: 3;
+}
+.hero-grid .item-5 {
+  grid-column: 4;
+}
+.hero-grid .item-6, .hero-grid .item-7, .hero-grid .item-8 {
+  grid-row: 4;
+}
+.hero-grid .item-8 {
+  grid-column: span 2;
+}
+
+.home-sports-gallery, .home-animals-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.home-sports-gallery .sports-text, .home-sports-gallery .animals-text, .home-animals-gallery .sports-text, .home-animals-gallery .animals-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 20%;
+  font-family: "Poppins", sans-serif;
+}
+.home-sports-gallery .sports-text h4, .home-sports-gallery .animals-text h4, .home-animals-gallery .sports-text h4, .home-animals-gallery .animals-text h4 {
+  font-weight: 700;
+}
+.home-sports-gallery .sports-text p, .home-sports-gallery .animals-text p, .home-animals-gallery .sports-text p, .home-animals-gallery .animals-text p {
+  color: gray;
+}
+.home-sports-gallery .sports-grid, .home-sports-gallery .animals-grid, .home-animals-gallery .sports-grid, .home-animals-gallery .animals-grid {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 20px 200px 20px 200px 20px;
+  gap: 10px;
+}
+.home-sports-gallery .sports-grid .item-1, .home-sports-gallery .animals-grid .item-1, .home-animals-gallery .sports-grid .item-1, .home-animals-gallery .animals-grid .item-1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.home-sports-gallery .sports-grid .item-2, .home-sports-gallery .animals-grid .item-2, .home-animals-gallery .sports-grid .item-2, .home-animals-gallery .animals-grid .item-2 {
+  grid-column: 2/3;
+  grid-row: 2/4;
+  z-index: 1;
+}
+.home-sports-gallery .sports-grid .item-3, .home-sports-gallery .animals-grid .item-3, .home-animals-gallery .sports-grid .item-3, .home-animals-gallery .animals-grid .item-3 {
+  grid-column: 1/2;
+  grid-row: 3/5;
+}
+.home-sports-gallery .sports-grid .item-4, .home-sports-gallery .animals-grid .item-4, .home-animals-gallery .sports-grid .item-4, .home-animals-gallery .animals-grid .item-4 {
+  grid-column: 2/3;
+  grid-row: 4/6;
+}
+.home-sports-gallery .sports-grid .item-5, .home-sports-gallery .animals-grid .item-5, .home-animals-gallery .sports-grid .item-5, .home-animals-gallery .animals-grid .item-5 {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.home-sports-gallery .sports-grid .item-6, .home-sports-gallery .animals-grid .item-6, .home-animals-gallery .sports-grid .item-6, .home-animals-gallery .animals-grid .item-6 {
+  grid-column: 3/4;
+  grid-row: 3/5;
+}
+
+.home-animals-gallery {
+  flex-direction: row-reverse;
+}
+
+.carousel-item {
+  height: 300px;
+}
+.carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  margin-left: 0 !important;
+}
+
+@media screen and (min-width: 581px) and (max-width: 1024px) {
+  .hero-grid .item-text {
+    grid-column: span 4;
+    justify-self: center;
+    text-align: center;
+  }
+  .hero-grid .item-1 {
+    grid-column: 1;
+  }
+  .hero-grid .item-2 {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  .hero-grid .item-3 {
+    grid-column: 1;
+  }
+  .hero-grid .item-4 {
+    grid-column: 2/4;
+  }
+  .home-sports-gallery .sports-grid, .home-sports-gallery .animals-grid, .home-animals-gallery .sports-grid, .home-animals-gallery .animals-grid {
+    grid-template-columns: 150px 150px;
+  }
+  .home-sports-gallery .sports-grid .item-1, .home-sports-gallery .sports-grid .item-3, .home-sports-gallery .animals-grid .item-1, .home-sports-gallery .animals-grid .item-3, .home-animals-gallery .sports-grid .item-1, .home-animals-gallery .sports-grid .item-3, .home-animals-gallery .animals-grid .item-1, .home-animals-gallery .animals-grid .item-3 {
+    display: none;
+  }
+  .home-sports-gallery .sports-grid .item-2, .home-sports-gallery .animals-grid .item-2, .home-animals-gallery .sports-grid .item-2, .home-animals-gallery .animals-grid .item-2 {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  .home-sports-gallery .sports-grid .item-4, .home-sports-gallery .animals-grid .item-4, .home-animals-gallery .sports-grid .item-4, .home-animals-gallery .animals-grid .item-4 {
+    grid-column: 1;
+    grid-row: 3/5;
+  }
+  .home-sports-gallery .sports-grid .item-5, .home-sports-gallery .animals-grid .item-5, .home-animals-gallery .sports-grid .item-5, .home-animals-gallery .animals-grid .item-5 {
+    grid-column: 2;
+    grid-row: 2/4;
+  }
+  .home-sports-gallery .sports-grid .item-6, .home-sports-gallery .animals-grid .item-6, .home-animals-gallery .sports-grid .item-6, .home-animals-gallery .animals-grid .item-6 {
+    grid-column: 2;
+    grid-row: 4/6;
+  }
+}
+@media screen and (max-width: 580px) {
+  .hero-grid .item-2, .hero-grid .item-5, .hero-grid .item-8 {
+    display: none;
+  }
+  .hero-grid .item-text {
+    grid-column: 1/5;
+  }
+  .hero-grid .item-1 {
+    grid-row: 2;
+  }
+  .hero-grid .item-1, .hero-grid .item-3 {
+    grid-column: span 2;
+  }
+  .hero-grid .item-3 {
+    grid-row: span 2;
+  }
+  .hero-grid .item-4 {
+    grid-row: 3;
+    grid-column: 1/3;
+  }
+  .hero-grid .item-7 {
+    grid-column: 3;
+  }
+  .hero-grid .item-7, .hero-grid .item-6 {
+    grid-column: span 2;
+  }
+  .home-sports-gallery, .home-animals-gallery {
+    flex-direction: column;
+  }
+  .home-sports-gallery .sports-text, .home-sports-gallery .animals-text, .home-animals-gallery .sports-text, .home-animals-gallery .animals-text {
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+  .home-sports-gallery .item-5, .home-sports-gallery .item-6, .home-animals-gallery .item-5, .home-animals-gallery .item-6 {
+    display: none;
+  }
+  nav .container {
+    padding: 0 !important;
+  }
+}
+.navbar-toggler {
+  border: none !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}/*# sourceMappingURL=index.css.map */
